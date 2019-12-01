@@ -1,0 +1,35 @@
+{
+  "name": "timesheets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "new.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf ./dist && webpack --mode production",
+    "start": "webpack-dev-server --mode development"
+  },
+  "author": "Rusakov Vladislav",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "less": "^3.10.3",
+    "popper.js": "^1.15.0",
+    "webpack": "^4.39.3"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "rimraf": "^3.0.0",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.6.2",
+    "webpack-bundle-analyzer": "^3.4.1",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
