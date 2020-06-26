@@ -55,6 +55,7 @@ class TimeSheets {
         this.startYear = new Date(`${this.today.getFullYear()}-01-01`);
         this.getWeeks();
         this.currentWeek = new Days(this.weeksToDate(this.currentWeekNum));
+        console.log(this.weeksToDate(this.currentWeekNum));
         this.nextWeek = new Days(this.weeksToDate(this.nextWeekNum));
         this.twoLastDigitsOfCurrentYear = this.startYear.getFullYear() % 100;
     }
@@ -64,13 +65,13 @@ class TimeSheets {
         this.currentWeekNum = Math.ceil(((this.today.getTime() - this.startYear.getTime())) / Days.DAY_IN_MS_MULTIPLIER / 7);
         this.nextWeekNum = this.currentWeekNum + 1;
         console.log((this.today.getTime() - this.startYear.getTime()) / (Days.DAY_IN_MS_MULTIPLIER * 7));
+        console.log(this.currentWeekNum);
 
     }
 
     weeksToDate(week: number): Date {
-
-        return new Date((week - 1) * 7 * Days.DAY_IN_MS_MULTIPLIER + this.startYear.getTime() - Days.DAY_IN_MS_MULTIPLIER);
-
+        console.log(this.startYear.getDay());
+        return new Date((week - 1) * 7 * Days.DAY_IN_MS_MULTIPLIER + this.startYear.getTime() - (this.startYear.getDay() - 1) * Days.DAY_IN_MS_MULTIPLIER);
     }
 }
 
